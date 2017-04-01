@@ -16,3 +16,6 @@ git config --global alias.um 'pull origin master'
 # then run
 echo "put 'source ~/ubuntu-local-configs/custom.sh' on ~/.zshrc"
 echo "RUN $ source ~/.zshrc"
+
+dconf write /org/compiz/profiles/unity/plugins/core/hsize 1
+dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
