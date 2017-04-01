@@ -1,7 +1,5 @@
-# use -> add on .zshrc
-# source ~/ubuntu-local-configs/powerlevel9k-custom.sh
-
 # cp agnoster.zsh-theme ~/.oh-my-zsh/themes
+# https://github.com/powerline/fonts
 
 #ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerlevel9k/powerlevel9k"
