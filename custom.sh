@@ -1,4 +1,4 @@
-source ~/ubuntu-local-configs/powerlevel9k-custom.sh
+source ~/linux-local-configs/powerlevel9k-custom.sh
 
 # git
 alias g='git '
