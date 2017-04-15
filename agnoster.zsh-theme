@@ -107,8 +107,9 @@ prompt_git() {
 # prompt_dir() {
 #   prompt_segment blue $PRIMARY_FG ' %~ '
 # }
+
 prompt_dir() {
-  prompt_segment blue black '%~'
+  prompt_segment black yellow '%~'
 }
 
 # Status:

@@ -19,3 +19,7 @@ echo "RUN $ source ~/.zshrc"
 
 dconf write /org/compiz/profiles/unity/plugins/core/hsize 1
 dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
+
+# fonts
+# https://github.com/powerline/fonts
+# https://powerline.readthedocs.io/en/latest/installation/linux.html
