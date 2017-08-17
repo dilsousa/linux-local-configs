@@ -19,6 +19,7 @@ echo "RUN $ source ~/.zshrc"
 
 dconf write /org/compiz/profiles/unity/plugins/core/hsize 1
 dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
+gsettings set org.gnome.shell.overrides workspaces-only-on-primary false
 
 # fonts
 # https://github.com/powerline/fonts

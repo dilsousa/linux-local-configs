@@ -4,4 +4,4 @@ source ~/linux-local-configs/powerlevel9k-custom.sh
 alias g='git '
 
 # maven
-alias m='mvn clean install -U -T4 '
+alias m='mvn clean install -U '
