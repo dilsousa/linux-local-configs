@@ -21,6 +21,9 @@ echo "RUN $ source ~/.zshrc"
 # dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
 # gsettings set org.gnome.shell.overrides workspaces-only-on-primary false
 
+# left buttons on the window:
+# gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
+
 # fonts
 # https://github.com/powerline/fonts
 # https://powerline.readthedocs.io/en/latest/installation/linux.html
