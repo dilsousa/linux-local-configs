@@ -1,16 +1,11 @@
-#!/bin/sh
+#!/bin/zsh
 cp agnoster.zsh-theme ~/.oh-my-zsh/themes
 # drop ZSH_THEME from .zshrc
 
 # Configure git
-git config --global alias.co checkout
-git config --global alias.b branch
-git config --global alias.c commit
 git config --global alias.st status
 git config --global alias.a 'add .'
 git config --global alias.ph push
-git config --global alias.u pull
-git config --global alias.um 'pull origin master'
 
 git config --global user.email "andreformento.sc@gmail.com"
 git config --global user.name "André Formento"
@@ -18,8 +13,8 @@ git config --global user.name "André Formento"
 git config --global push.default simple
 
 HIGHLIGHTING_PATH="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
-#rm -rf $HIGHLIGHTING_PATH
-#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HIGHLIGHTING_PATH
+rm -rf $HIGHLIGHTING_PATH
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HIGHLIGHTING_PATH
 
 
 ZSHRC_FILE="$HOME/.zshrc"
@@ -38,7 +33,7 @@ echo "source ~/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
 
 echo "To restore execute '$ cp $ZSHRC_FILE_BKP $ZSHRC_FILE'"
 
-echo "RUN $ source $ZSHRC_FILE"
+source "$ZSHRC_FILE"
 
 # dconf write /org/compiz/profiles/unity/plugins/core/hsize 1
 # dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
