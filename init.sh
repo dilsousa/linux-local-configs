@@ -36,11 +36,13 @@ do
 	sed -i "/plugins=($/ a \ \ $PLUGIN_NAME" ${ZSHRC_FILE}
 done
 
-echo "source ~/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
+echo "source $HOME/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
+echo "source $HOME/.sdkman/bin/sdkman-init.sh" >> ${ZSHRC_FILE}
+
 
 echo "To restore execute '$ cp $ZSHRC_FILE_BKP $ZSHRC_FILE'"
 
-echo $ZSHRC_FILE
+echo "### Run this command ###\nsource $ZSHRC_FILE"
 source $ZSHRC_FILE
 
 # dconf write /org/compiz/profiles/unity/plugins/core/hsize 1
