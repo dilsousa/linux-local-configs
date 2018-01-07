@@ -12,7 +12,7 @@ git config --global user.name "André Formento"
 
 git config --global push.default simple
 
-HIGHLIGHTING_PATH="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+HIGHLIGHTING_PATH=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 rm -rf $HIGHLIGHTING_PATH
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HIGHLIGHTING_PATH
 
