@@ -37,7 +37,8 @@ do
 done
 
 echo "source $HOME/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
-echo "source $HOME/.sdkman/bin/sdkman-init.sh" >> ${ZSHRC_FILE}
+SDKMAN_INIT=${SDKMAN_CUSTOM:-$HOME/.sdkman}/bin/sdkman-init.sh
+echo "source $SDKMAN_INIT" >> ${ZSHRC_FILE}
 
 
 echo "To restore execute '$ cp $ZSHRC_FILE_BKP $ZSHRC_FILE'"
