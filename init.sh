@@ -12,11 +12,6 @@ git config --global user.name "André Formento"
 
 git config --global push.default simple
 
-HIGHLIGHTING_PATH=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-rm -rf $HIGHLIGHTING_PATH
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HIGHLIGHTING_PATH
-
-
 ZSHRC_FILE="$HOME/.zshrc"
 ZSHRC_FILE_BKP="$ZSHRC_FILE.bkp"
 if [ -f "$ZSHRC_FILE_BKP" ];
@@ -28,12 +23,25 @@ fi
 
 # http://www.yourownlinux.com/2015/04/sed-command-in-linux-append-and-insert-lines-to-file.html
 
-sed -i '/plugins=($/ a \ \ zsh-syntax-highlighting' ${ZSHRC_FILE}
+
+## declare an array variable
+declare -a arr=("zsh-syntax-highlighting" "zsh-autosuggestions")
+
+## now loop through the above array
+for PLUGIN_NAME in "${arr[@]}"
+do
+	PLUGIN_PATH=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$PLUGIN_NAME
+	rm -rf $PLUGIN_PATH
+	git clone https://github.com/zsh-users/$PLUGIN_NAME.git $PLUGIN_PATH
+	sed -i "/plugins=($/ a \ \ $PLUGIN_NAME" ${ZSHRC_FILE}
+done
+
 echo "source ~/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
 
 echo "To restore execute '$ cp $ZSHRC_FILE_BKP $ZSHRC_FILE'"
 
-source "$ZSHRC_FILE"
+echo $ZSHRC_FILE
+source $ZSHRC_FILE
 
 # dconf write /org/compiz/profiles/unity/plugins/core/hsize 1
 # dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
