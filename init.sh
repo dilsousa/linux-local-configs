@@ -1,11 +1,12 @@
 #!/bin/zsh
+CURRENT_DIR=$(pwd)
+
 cp agnoster.zsh-theme ~/.oh-my-zsh/themes
 
-INTERNAL_DIR=$(pwd)
 cd ~/.oh-my-zsh
 git add .
 git commit -m "Add agnoster.zsh-theme"
-cd $INTERNAL_DIR
+cd $CURRENT_DIR
 # drop ZSH_THEME from .zshrc
 
 # Configure git
