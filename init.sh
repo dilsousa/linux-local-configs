@@ -6,6 +6,7 @@ cp agnoster.zsh-theme ~/.oh-my-zsh/themes
 git config --global alias.st status
 git config --global alias.a 'add .'
 git config --global alias.ph push
+git config --global alias.ur '!git st; git add README.md; git commit -m "Update readme"; git ph'
 
 git config --global user.email "andreformento.sc@gmail.com"
 git config --global user.name "André Formento"
