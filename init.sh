@@ -1,5 +1,7 @@
 #!/bin/zsh
 cp agnoster.zsh-theme ~/.oh-my-zsh/themes
+git add .
+g commit -m "Add agnoster.zsh-theme"
 # drop ZSH_THEME from .zshrc
 
 # Configure git
