@@ -33,7 +33,7 @@ fi
 
 
 ## declare an array variable
-declare -a arr=("zsh-syntax-highlighting" "zsh-autosuggestions" "tmux")
+declare -a arr=("zsh-syntax-highlighting" "zsh-autosuggestions")
 
 ## now loop through the above array
 for PLUGIN_NAME in "${arr[@]}"
@@ -47,7 +47,7 @@ done
 echo "source $HOME/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
 SDKMAN_INIT=${SDKMAN_CUSTOM:-$HOME/.sdkman}/bin/sdkman-init.sh
 echo "source $SDKMAN_INIT" >> ${ZSHRC_FILE}
-
+echo "[[ $TERM != "screen" ]] && exec tmux" >> ${ZSHRC_FILE}
 
 echo "To restore execute '$ cp $ZSHRC_FILE_BKP $ZSHRC_FILE'"
 
