@@ -33,7 +33,7 @@ fi
 
 
 ## declare an array variable
-declare -a arr=("zsh-syntax-highlighting" "zsh-autosuggestions")
+declare -a arr=("zsh-syntax-highlighting" "zsh-autosuggestions" "tmux")
 
 ## now loop through the above array
 for PLUGIN_NAME in "${arr[@]}"
