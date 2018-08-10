@@ -6,6 +6,7 @@ alias g='git '
 # maven
 alias m='mvn clean install -U '
 alias dod='~/linux-local-configs/docker-commands.sh'
+alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y'
 
 # alias wifi=watch -n 1 "awk 'NR==3 {print \"WiFi Signal Strength = \" \$3 \"00 %\"}''' /proc/net/wireless"
 
