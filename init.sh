@@ -1,14 +1,4 @@
 #!/bin/zsh
-#CURRENT_DIR=$(pwd)
-#
-#cp agnoster.zsh-theme ~/.oh-my-zsh/themes
-#
-#cd ~/.oh-my-zsh
-#git add .
-#git commit -m "Add agnoster.zsh-theme"
-#cd $CURRENT_DIR
-# drop ZSH_THEME from .zshrc
-
 # Configure git
 git config --global alias.st status
 git config --global alias.a 'add .'
@@ -31,7 +21,6 @@ fi
 
 # http://www.yourownlinux.com/2015/04/sed-command-in-linux-append-and-insert-lines-to-file.html
 
-
 ## declare an array variable
 declare -a arr=("zsh-syntax-highlighting" "zsh-autosuggestions")
 
@@ -43,6 +32,11 @@ do
 	git clone https://github.com/zsh-users/$PLUGIN_NAME.git $PLUGIN_PATH
 	sed -i "/plugins=($/ a \ \ $PLUGIN_NAME" ${ZSHRC_FILE}
 done
+
+# Instal lein (clojure)
+mkdir -p ~/bin
+curl 'https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein' > ~/bin/lein
+chmod +x ~/bin/lein
 
 echo "source $HOME/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
 SDKMAN_INIT=${SDKMAN_CUSTOM:-$HOME/.sdkman}/bin/sdkman-init.sh
