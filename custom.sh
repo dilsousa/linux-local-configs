@@ -6,7 +6,9 @@ alias g='git '
 # maven
 alias m='mvn clean install -U '
 alias dod='~/linux-local-configs/docker-commands.sh'
-alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y'
+alias update='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y  && sudo apt autoclean -y'
+alias wip="g add . && g commit -m 'wip' && g ph"
+alias master="g checkout master && g pull"
 
 export PATH=$PATH:~/bin/lein
 
