@@ -8,7 +8,7 @@ git config --global alias.ur '!git st; git add README.md; git commit -m "Update 
 git config --global user.email "andreformento.sc@gmail.com"
 git config --global user.name "André Formento"
 
-git config --global push.default simple
+git config --global push.default current
 
 ZSHRC_FILE="$HOME/.zshrc"
 ZSHRC_FILE_BKP="$ZSHRC_FILE.bkp"
