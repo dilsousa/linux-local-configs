@@ -1,6 +1,16 @@
 # linux-local-configs
 
-Clone and run `$ ./init.sh && source $HOME/.zshrc`
+## Initial configuration
 
-### References
-- https://medium.com/@ivanaugustobd/seu-terminal-pode-ser-muito-muito-mais-produtivo-3159c8ef77b2
+- Add a configuration opening file:
+```shell
+vim ~/.bashrc
+```
+
+- Put a new line at the end
+```shell
+source PATH/customizations.sh
+```
+
+Example: `source /home/andre/dev/linux-local-configs/customizations.sh`
+
