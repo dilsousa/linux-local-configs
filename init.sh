@@ -22,7 +22,7 @@ fi
 # http://www.yourownlinux.com/2015/04/sed-command-in-linux-append-and-insert-lines-to-file.html
 
 ## declare an array variable
-declare -a arr=("zsh-syntax-highlighting" "zsh-autosuggestions")
+declare -a arr=("zsh-syntax-highlighting" "zsh-autosuggestions" "pyenv")
 
 ## now loop through the above array
 for PLUGIN_NAME in "${arr[@]}"
