@@ -34,9 +34,11 @@ do
 done
 
 # Instal lein (clojure)
-mkdir -p ~/bin
-curl 'https://raw.githubusercontent.com/technomancy/leiningen/2.8.1/bin/lein' > ~/bin/lein
-chmod +x ~/bin/lein
+mkdir -p ~/.local/bin
+curl 'https://raw.githubusercontent.com/technomancy/leiningen/2.8.1/bin/lein' > ~/.local/bin/lein
+chmod +x ~/.local/bin/lein
+
+export PATH=$HOME/.local/bin:$PATH
 
 echo "source $HOME/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
 SDKMAN_INIT=${SDKMAN_CUSTOM:-$HOME/.sdkman}/bin/sdkman-init.sh
