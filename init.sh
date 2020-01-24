@@ -35,7 +35,7 @@ done
 
 # Instal lein (clojure)
 mkdir -p ~/bin
-curl 'https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein' > ~/bin/lein
+curl 'https://raw.githubusercontent.com/technomancy/leiningen/2.8.1/bin/lein' > ~/bin/lein
 chmod +x ~/bin/lein
 
 echo "source $HOME/linux-local-configs/custom.sh" >> ${ZSHRC_FILE}
