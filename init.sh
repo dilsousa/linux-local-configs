@@ -10,8 +10,7 @@ git config --global user.name "André Formento"
 
 git config --global push.default current
 
-# configure editor
-# sudo update-alternatives --config editor
+echo "install vim and configure editor 'sudo update-alternatives --config editor'"
 
 ZSHRC_FILE="$HOME/.zshrc"
 ZSHRC_FILE_BKP="$ZSHRC_FILE.bkp"
