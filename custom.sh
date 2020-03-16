@@ -26,6 +26,10 @@ ph() {
     fi
 }
 
+nodetool() {
+    docker run --rm cassandra:3.0 nodetool $@
+}
+
 export PATH=$PATH:~/bin/lein
 
 alias k='kubectl'
