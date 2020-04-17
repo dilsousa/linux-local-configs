@@ -7,6 +7,7 @@ alias g='git '
 alias update='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y  && sudo apt autoclean -y'
 alias wip="g add -A && g commit -m 'wip' && g ph"
 alias master="g checkout master && g pull"
+alias screen='/snap/screen/current/screen/Screen'
 
 clone() {
     GIT_PATH_NAME="$1"
