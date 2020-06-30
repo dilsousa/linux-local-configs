@@ -9,6 +9,8 @@ alias wip="g add -A && g commit -m 'wip' && g ph"
 alias master="g checkout master && g pull"
 alias docker-rm="docker rm -f \$(docker ps -a -q)"
 alias docker-rmi="docker rmi -f \$(docker images -q)"
+alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
+# use: kcd some-namespace
 
 clone() {
     GIT_PATH_NAME="$1"

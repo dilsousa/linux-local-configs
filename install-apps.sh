@@ -11,3 +11,5 @@ sdk install maven
 sdk install java 9.0.1-oracle
 sdk install scala
 sdk install sbt
+
+echo "configure editor 'sudo update-alternatives --config editor'"
