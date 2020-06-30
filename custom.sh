@@ -1,4 +1,7 @@
-source ~/linux-local-configs/powerlevel9k-custom.sh
+# call this file before 'source $ZSH/oh-my-zsh.sh'
+# source $HOME/linux-local-configs/custom.sh
+
+plugins=(git "zsh-syntax-highlighting" "zsh-autosuggestions" "kubectl" "helm" "git")
 
 # git
 alias g='git '
@@ -7,6 +10,7 @@ alias g='git '
 alias update='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y  && sudo apt autoclean -y'
 alias wip="g add -A && g commit -m 'wip' && g ph"
 alias master="g checkout master && g pull"
+alias k='kubectl'
 alias docker-rm="docker rm -f \$(docker ps -a -q)"
 alias docker-rmi="docker rmi -f \$(docker images -q)"
 alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
@@ -34,6 +38,8 @@ nodetool() {
     docker run --rm cassandra:3.0 nodetool $@
 }
 
-export PATH=$PATH:~/bin/lein
+mac() {
+  sudo bash -c "echo 2 > /sys/module/hid_apple/parameters/fnmode"
+}
 
-alias k='kubectl'
+export PATH=$PATH:~/bin/lein
