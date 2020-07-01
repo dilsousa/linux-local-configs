@@ -13,3 +13,13 @@ sdk install scala
 sdk install sbt
 
 echo "configure editor 'sudo update-alternatives --config editor'"
+
+
+# Docker
+sudo apt-get install -y containerd.io
+wget -O docker-ce-cli.deb https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce-cli_19.03.6~3-0~ubuntu-bionic_amd64.deb
+wget -O docker-ce.deb https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce_19.03.6~3-0~ubuntu-bionic_amd64.deb
+
+sudo dpkg -i docker-ce-cli.deb
+sudo dpkg -i docker-ce.deb
+rm -rf docker-ce.deb docker-ce-cli.deb
