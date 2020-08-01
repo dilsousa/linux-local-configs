@@ -14,6 +14,9 @@ sdk install sbt
 
 echo "configure editor 'sudo update-alternatives --config editor'"
 
+sudo snap install code
+# for work code on terminal:
+ln -s /snap/bin/code /usr/bin/code
 
 # Docker
 sudo apt-get install -y containerd.io
