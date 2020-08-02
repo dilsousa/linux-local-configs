@@ -1,5 +1,6 @@
 # call this file before 'source $ZSH/oh-my-zsh.sh'
 # source $HOME/linux-local-configs/custom.sh
+# source $HOME/linux-local-configs/docker-aliases.sh
 
 # git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 # git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/zsh-autosuggestions
