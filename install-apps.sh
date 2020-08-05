@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-sudo apt install curl silversearcher-ag jq vim copyq shotwell xclip -y
+sudo apt install curl silversearcher-ag jq vim copyq shotwell xclip golang-go -y
 
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
